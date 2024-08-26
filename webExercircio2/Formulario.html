@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>PDV produtos</title>
+</head>
+<body>
+  <div>
+    <h2 id="titulo">Novo Produto</h2>
+    <br>
+  </div>
+  <form>
+    <fieldset class="grupo">
+      <h1>Classificação do produto</h1><br>
+      <div class="campo">
+      <label for="codigo"><strong>Código</strong></label>
+      <!-- apenas numeros -->
+      <input type="text" name="codigo" id="codigo" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+      </div>
+      <div class="campo">
+         <label for="nome"><strong>nome</strong></label>
+      <input type="text" name="nome" id="nome" required>
+      </div>
+      <div class="campo">
+        <label for="fornecedor"><strong>Fornecedor</strong></label>
+     <input type="text" name="fornecedor" id="fornecedor" required>
+     </div>
+           <div class="campo">
+            <label for="Marca"><strong>Marca </strong></label>
+            <select id="Marca">
+            <option selected disable value="">Selecione</option>
+              <option>Vigor</option>
+              <option>Itembé</option>
+              <option>Fazendinha</option>
+              <option>Danone</option>
+          </select>
+           </div>
+           <br>
+           <div class="campo">
+             <br>
+             <label><strong>Observação | Detalhamento | Descrição</strong></label>
+             <textarea row="6" style="width: 26em" id="descricao" nome="descricao"></textarea>
+           </div>
+           <div class="campo">
+            <label for="fabricacao"><strong>Fabricação</strong></label>
+            <input type="text" name="fabricacao" id="fabricacao" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+            </div>
+            <div class="campo">
+              <label for="validade"><strong>Validade</strong></label>
+              <input type="text" name="validade" id="validade" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+              </div>
+      </fieldset>
+
+      <fieldset class="grupo">
+        <h1>Dados para emissão de nota fiscal</h1><br>
+        <div class="campo">
+        <label for="NCM"><strong>NCM</strong></label>
+        <!-- apenas numeros -->
+        <input type="text" name="NCM id="NCM"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+        </div>
+        <div class="campo">
+           <label for="ICMS"><strong>ICMS ST retido </strong></label>
+           <input type="text" name="ICMS id="ICMS"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+        </div>
+        <div class="campo">
+          <label><strong>Calculo do PIS</strong></label>
+          <label>
+          <input type="radio" nome="conformecfop" value="ConformeCFOP" checked>Conforme CFOP
+          </input>
+          </label>
+        <label>
+        <input type="radio" nome="calcula" value="Calcula">Calcula
+          </input>
+        </label>
+        <label>
+        <input type="radio" nome="ncalcula" value="NaoCalcula">Não Calcula
+          </input>
+      </label>
+          </div>
+      
+      <div class="campo">
+        <label><strong>Calculo da COFINS</strong></label>
+        <label>
+        <input type="radio" nome="conformecfop" value="ConformeCFOP" checked>Conforme CFOP
+        </input>
+        </label>
+      <label>
+      <input type="radio" nome="calcula" value="Calcula">Calcula
+        </input>
+      </label>
+      <label>
+      <input type="radio" nome="ncalcula" value="NaoCalcula">Não Calcula
+        </input>
+    </label>
+        </div>
+
+        <fieldset class="grupo">
+          <h1>Situação</h1><br>
+          <div class="campo">
+          <label for="data"><strong>Data do cadastro</strong></label>
+          <input type="text" name="data" id="data" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+          </div>
+          <div class="campo">
+            <label for="data"><strong>Ultima alteração</strong></label>
+            <input type="text" name="data" id="data" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" ></input>
+            </div>
+          <div class="campo">
+             <label for="ateradopor"><strong>Alterado por</strong></label>
+          <input type="text" name="ateradopor" id="ateradopor" required>
+               <br>
+               <div class="campo">
+                 <br>
+                 <label><strong>Observação</strong></label>
+                 <textarea row="6" style="width: 26em" id="descricao" nome="descricao"></textarea>
+               </div>
+          </fieldset>
+          <button class="botao" type="submit">Concluir</button>
+
+         
+
+      
+  </form>
+    </fieldset>
+
+ 
+
+</body>
